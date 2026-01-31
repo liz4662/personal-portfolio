@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css">
@@ -25,44 +25,66 @@
 
 
     <section id="welcome-section" class="welcome-section">
-      <h1>WELCOME!</h1>
-      <p>My name is Lizette.</p>
+      <div class="welcome-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+      </div>
+      
+      <div class="welcome-content">
+        <h1 class="welcome-title">
+          <span class="title-line">WELCOME!</span>
+        </h1>
+        <p class="welcome-intro">My name is <span class="highlight-name">Lizette</span>.</p>
+        
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+        </div>
+      </div>
     </section>
 
 
     <section id="projects" class="projects-section">
       <h2 class="projects-section-header">These are some of my projects</h2>
 
+      <!-- Class Filter Buttons -->
+      <div class="class-filters">
+        <button class="filter-btn active" data-class="all">All Projects</button>
+        <button class="filter-btn" data-class="COMSBC3930">Creative Embedded Systems</button>
+      </div>
+
       <div class="projects-grid">
 
-        <div class="project project-tile">
+        <!-- Metamorphosis Project -->
+        <div class="project project-tile" data-class="COMSBC3930">
+          
+          <div class="class-tag">COMSBC3930</div>
 
           <h3 class="project-title">Metamorphosis</h3>
 
-          <img
-            class="project-image"
-            src="images/metamorphosis.png"
-            alt="Metamorphosis butterfly sculpture"
-          />
+          <div class="slideshow">
+            <img class="project-image" src="images/metamorphosis.png" alt="Metamorphosis view one">
+            <img class="project-image" src="images/metamorphosis2.png" alt="Metamorphosis view two">
+            <img class="project-image" src="images/metamorphosis3.png" alt="Metamorphosis view three">
+          </div>
 
           <p class="project-summary">
-            This piece uses the symmetry of the protoboard as a structural spine, guiding
+            This piece uses the symmetry of the protoboard 
             the butterfly form created from bent brass wire.
           </p>
 
           <div class="project-reflection">
             <h4>Reflection</h4>
             <p>
-              I approached this piece by first considering the protoboard as a structural
-              and visual spine, taking advantage of its natural symmetry to guide the
-              overall form. The butterfly represents transformation and growth, which
-              parallels my learning process in this class.
+              I approached this piece by treating the protoboard as both a structural and visual spine, using its natural symmetry to guide the overall form. 
+              The butterfly shape emerged as I bent and shaped the brass wire, allowing the design to grow outward in a balanced way. 
+              The butterfly represents my own growth and transformation throughout my years at Columbia, much like how a butterfly gradually changes over time. This piece reflects how my skills, confidence, and creative thinking have evolved through continued practice and learning.
             </p>
           </div>
 
         </div>
 
-
+        <!-- Add more projects here with appropriate data-class attributes -->
 
       </div>
 
@@ -78,10 +100,8 @@
         <p>How do you take your coffee?</p>
       </div>
       <div class="contact-links">
-        <a href="https://facebook.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> Facebook</a>
-        <a id="profile-link" href="https://github.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://twitter.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="mailto:example@example.com" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
+        <a id="profile-link" href="https://github.com/liz4662" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:lizette4662@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a>
         <a href="tel:6506904544" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call me</a>
       </div>
     </section>
@@ -90,15 +110,9 @@
 
     <!-- START FOOTER SECTION -->
     <footer>
-      <p>
-        **This is just a fake portfolio. All the projects and contact details
-        given are not real.
-      </p>
-      <p>
-        © Created for
-        <a href="https://www.freecodecamp.com/" target="_blank">freeCodeCamp <i class="fab fa-free-code-camp"></i></a>
-      </p>
     </footer>
+
+    <script src="script.js"></script>
     </body>
 
 </html>
