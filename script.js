@@ -20,4 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+  const slideshows = document.querySelectorAll('.slideshow');
+
+  slideshows.forEach(slideshow => {
+    const video = slideshow.querySelector('video');
+
+    if (video) {
+      video.addEventListener('ended', () => {
+        video.style.opacity = '0';
+        video.style.zIndex = '0';
+        
+        slideshow.classList.add('video-ended');
+      });
+    }
+  });
+
 });

@@ -324,25 +324,53 @@ body {
   justify-content: center;
 }
 
+/* Default slideshow for images only (Metamorphosis) */
 .slideshow img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  animation: slideShow 10s infinite;
   opacity: 0;
+  animation: slideShow 12s infinite;
+  z-index: 1; 
 }
 
 .slideshow img:nth-child(1) { animation-delay: 0s; }
 .slideshow img:nth-child(2) { animation-delay: 4s; }
 .slideshow img:nth-child(3) { animation-delay: 8s; }
 
+/* Video slideshow styles */
+.slideshow video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  z-index: 2; 
+}
+
+/* When video is present, images start hidden and will be controlled by JavaScript */
+.slideshow:has(video) img {
+  opacity: 0;
+  animation: none;
+}
+
+/* Image slideshow animation after video ends */
+.slideshow.video-ended img {
+  animation: slideShow 12s infinite;
+}
+
+.slideshow.video-ended img:nth-child(2) { animation-delay: 0s; }
+.slideshow.video-ended img:nth-child(3) { animation-delay: 4s; }
+.slideshow.video-ended img:nth-child(4) { animation-delay: 8s; }
+
 @keyframes slideShow {
   0% { opacity: 0; }
   10% { opacity: 1; }
-  40% { opacity: 1; }
-  50% { opacity: 0; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
   100% { opacity: 0; }
 }
 
