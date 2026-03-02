@@ -438,3 +438,9 @@ footer a {
   color: var(--accent);
   text-decoration: none;
 }
+
+.video-last video {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
