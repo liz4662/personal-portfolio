@@ -37,3 +37,38 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+document.querySelectorAll('.video-last').forEach(slideshow => {
+  const images = slideshow.querySelectorAll('img');
+  const video = slideshow.querySelector('video');
+
+  if (!video || images.length === 0) return;
+
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.style.opacity = index === 0 ? '1' : '0';
+    img.style.position = 'absolute';
+  });
+
+  function showNextImage() {
+    images[currentIndex].style.opacity = '0';
+    currentIndex++;
+
+    if (currentIndex < images.length) {
+      images[currentIndex].style.opacity = '1';
+      setTimeout(showNextImage, 2000);
+    } else {
+      startVideo();
+    }
+  }
+
+  function startVideo() {
+    video.style.opacity = '1';
+    video.style.pointerEvents = 'auto';
+    video.style.position = 'relative';
+    video.play();
+  }
+
+  setTimeout(showNextImage, 2000);
+});
