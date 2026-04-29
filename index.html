@@ -187,6 +187,47 @@
           </div>
 
         </div>
+      </div><div class="project project-tile" data-class="COMSBC3930">
+          
+          <div class="class-tag">COMSBC3930</div>
+
+          <h3 class="project-title">Spongebob Pachinko Board</h3>
+
+          <div class="slideshow video-last">
+            <img class="project-image" src="images/Spongebob.jpg" alt="Spongebob view one">
+            <img class="project-image" src="images/Spongebob2.jpg" alt="Spongebob view two">
+            <img class="project-image" src="images/Spongebob3.jpg" alt="Spongebob view two">
+            <img class="project-image" src="images/Spongebob4.jpg" alt="Spongebob view two">
+
+    
+
+          </div>
+          <a class="project-video-link" href="https://www.youtube.com/shorts/9YqtVZsgI54" target="_blank">
+            ▶ Watch Video
+          </a>
+
+          <p class="project-summary">
+            This project uses an ESP32 capacitive touch interface to send serial events to a Python Pygame application, where multi mode input controls real time planting, growth, cutting, and bouquet rendering in a virtual garden.
+          </p>
+
+          <div class="project-reflection">
+            <h4>Reflection</h4>
+            <p>
+              My goal with Bloomscape was to create a space where users feel like they are caring for a living garden rather than using a traditional interface. 
+              Using capacitive touch sensors on the ESP32, actions like planting, watering, and cutting are performed through touch, making the interaction feel intuitive.
+              To further connect the physical and digital spaces, I created tangible props. A watering can is wired with a sensor so that when it touches a flower pad, the system detects the interaction and waters the flower. 
+              Similarly, I built a pair of scissors that, when touched to a flower’s touch pad, triggers a cut action in the virtual garden. 
+              These objects reinforce the illusion of real gardening tools and make the experience more immersive. I added subtle animations like swaying stems, falling petals, and water droplets 
+              help create a responsive ecosystem. I also simplified the interface by using single, double, and triple taps for mode switching, reducing hardware complexity while keeping the interaction playful.
+
+              Technically, I encountered challenges with capacitive touch sensitivity and noise, requiring careful threshold tuning and cooldown logic to prevent false triggers. 
+              I also had to work within the constraints of ESP32 touch capable pins and ensure reliable serial communication with the Pygame application. 
+              These constraints ultimately shaped both the interaction design and the final experience.
+            </p>
+            <a href = https://github.com/liz4662/Bloomscape> Technical Documentation </a>
+          </div>
+
+        </div>
 
 
       </div>
