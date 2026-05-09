@@ -53,16 +53,7 @@ body {
 }
 
 /* Enhanced Welcome Section */
-.welcome-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+
 
 .welcome-bg {
   position: absolute;
@@ -443,4 +434,132 @@ footer a {
   opacity: 0;
   pointer-events: none;
   position: absolute;
+}
+
+.welcome-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.25), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(251, 113, 133, 0.22), transparent 28%),
+    radial-gradient(circle at 50% 90%, rgba(167, 139, 250, 0.22), transparent 35%),
+    var(--bg);
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  max-width: 950px;
+  padding: 2rem;
+}
+
+.welcome-tag {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  border-radius: 999px;
+  color: var(--accent);
+  background: rgba(56, 189, 248, 0.12);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-name {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--accent-3));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.welcome-intro {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+  color: var(--text);
+}
+
+.welcome-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  text-decoration: none;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #020617;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.25);
+}
+
+.secondary-btn {
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.floating-label {
+  position: absolute;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  animation: floatLabel 5s ease-in-out infinite;
+}
+
+.label-1 {
+  top: 18%;
+  left: 5%;
+}
+
+.label-2 {
+  bottom: 25%;
+  right: 8%;
+  animation-delay: 1s;
+}
+
+.label-3 {
+  top: 28%;
+  right: 12%;
+  animation-delay: 2s;
+}
+
+@keyframes floatLabel {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+  }
 }
