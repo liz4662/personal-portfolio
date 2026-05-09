@@ -192,7 +192,7 @@
           
           <div class="class-tag">COMSBC3930</div>
 
-          <h3 class="project-title"> Final Spongebob Pachinko Board</h3>
+          <h3 class="project-title">Spongebob Pachinko Board</h3>
 
           <div class="slideshow video-last">
             <img class="project-image" src="images/Spongebob.jpeg" alt="Spongebob view one">
@@ -244,7 +244,7 @@
           
           <div class="class-tag">COMSBC3930</div>
 
-          <h3 class="project-title">Spongebob Pachinko Board</h3>
+          <h3 class="project-title">Final Spongebob Pachinko Board</h3>
 
           <div class="slideshow video-last">
             <img class="project-image" src="images/Final_Spongebob.png" alt="Spongebob view one">
@@ -264,21 +264,15 @@
           <div class="project-reflection">
             <h4>Reflection</h4>
             <p>
-              This project turns a regular pachinko board into a fun SpongeBob underwater scene that actually feels playful and alive. 
-              When we chose SpongeBob as our theme, it came from a shared nostalgic feeling since it is something we all grew up with, and we really wanted to bring that same sense of fun and familiarity into the board. 
-              A big part of the process was figuring out nail patterns that were both fun and unpredictable for the ball paths, but also realistic enough to work with the placement of the motors. 
-              We had to think about how the balls would bounce and spread out, while making sure the moving arms could still influence their direction in a noticeable way. 
-              The nails are also blended into the design with bubbles and sea shapes so the board still looks clean and cohesive. 
-              The moving arms feel like part of the environment too, almost like currents or sea creatures guiding the balls. 
-              Overall, it combines art, nostalgia, and interaction in a way that makes the game feel really dynamic and fun to play.
+              For my final project, we continued developing our SpongeBob themed pachinko board by focusing on making the experience feel more immersive and authentic to a real arcade or pachinko machine. 
+              Our goal was to create a system where lights, sounds, movement, and score feedback all worked together to make the board feel playful, responsive, and alive while still fitting the underwater SpongeBob theme.
+              To achieve this, we added WS2812 programmable LED lighting, bonus point logic, sound effects, and a 7 segment score display. 
+              The lights react in real time to gameplay events such as score milestones, bonus sequences, and motor movement, helping make the gameplay feel more dynamic and rewarding. 
+              We also integrated sound effects and music to reinforce the arcade atmosphere, while the 7 segment display continuously updates the player’s score during gameplay.
 
-              One of the main technical challenges we faced was figuring out the right threshold for when the motors should react. 
-              If the system triggered too often, the motors would constantly move and make the game feel chaotic, but if the threshold 
-              was too high, nothing would happen and the system wouldn’t feel responsive. We had to experiment with different values and watch how the 
-              ball distribution changed over time to find a balance that felt natural. Another challenge was making sure the ball collector reliably detected every ball. 
-              At first, we ran into issues with missed detections and false triggers due to inconsistent contact with the copper tape and noise in the signal. 
-              We had to adjust the placement of the sensors, tweak our debounce timing, and test repeatedly to make sure each ball was counted accurately. 
-              These challenges pushed us to really think about both the physical design and the code working together, and getting it right made the final system feel much smoother and more responsive.
+              One of my biggest technical challenges was integrating the lights, sound system, motors, and scoring system together so they could all respond in real time without interrupting gameplay. 
+              Another issue was ensuring the WS2812 LED strip received stable power and signal connections, since loose wiring could cause sections of the strip to stop responding.
+            
             </p>
             <a href = https://github.com/trinitysuma/pachinko> Technical Documentation </a>
           </div>
